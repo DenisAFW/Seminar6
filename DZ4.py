@@ -11,12 +11,8 @@ n = int(input('Введите размер списка '))
 list1 = [round(uniform(0,9),2) for i in range(n)]
 
 min = min(list1, key=lambda i: float(i))
-max = 0
-for i in range(len(list1)):
-    if max < list1[i]:
-        max = list1[i]
-    if min > list1[i]:
-        min = list1[i]
+max = max(list1, key=lambda i: float(i))
+
 dif = (max - int(max)) - (min - int(min))
 
 print(list1)
